@@ -13,6 +13,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { TemaComponent } from './tema/tema.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,86 +1,72 @@
 <div class= "container-fluid">
 
-    <div class="row bg-secondary d-flex align-intems-center">
+    <div class="row bg-secondary d-flex align-items-center">
         <div class="col-md-6">
 
-            <div class="row dd-flex justify-content-center">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-6 text-white">
-                    <h1 class="fs-54">Seja bem-vindo(a)</h1>
-                    <h5 class="fs-54">Expresse aqui os seus pensamentos e opiniões!</h5>
+                    <h1 class="fs-54">Seja muito bem-vindo(a)! </h1>
+                    <h5 class="fs-25">Expresse aqui os seus pensamentos e opiniões!</h5>
                 </div>
             </div>
 
             <div class="row d-flex justify-content-center mt-3 mb-5">
                 <div class="col-md-6">
-                    <button class="btn-btn-light mr-2"  data-toggle="modal" data-target="#novaPostagem">Nova postagem</button>
-                    <a class="btn-btn-outline-light" href="#postagens">Ver postagens</a>
+                    <button class="btn btn-light m-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova postagem</button>
+                    <a class="btn btn-outline-light" href="#postagens"> Ver postagens</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 d-flex justify-content-center">
-            <img src="https://i.imgur.com/RxucqDe.png" alt="desenho" height="500px">
+            <img src="https://i.imgur.com/RxucqDe.png" alt="desenho" width= "800px" height="800px">
 
         </div>
     </div>
-
-
 </div>
 
 <div class="container mb-5 mt-5" id="postagens">
+  <nav>
+    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+      <button class="nav-link active text-secondary font-weight-bold" id="nav-posts-tab" data-bs-toggle="tab" data-bs-target="#nav-post" type="button" role="tab" aria-controls="nav-post" aria-selected="true">Todas as Postagens</button>
+      <button class="nav-link text-secondary font-weight-bold" id="nav-myPost-tab" data-bs-toggle="tab" data-bs-target="#nav-myPost" type="button" role="tab" aria-controls="nav-myPost" aria-selected="false">Minhas Postagens</button>
+      <button class="nav-link text-secondary font-weight-bold" id="nav-tema-tab" data-bs-toggle="tab" data-bs-target="#nav-tema" type="button" role="tab" aria-controls="nav-tema" aria-selected="false">Postagens por Tema</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-posts" role="tabpanel" aria-labelledby="nav-posts-tab">Todas as postagens...</div>
+    <div class="tab-pane fade" id="nav-myPost" role="tabpanel" aria-labelledby="nav-myPost-tab">Minhas Postagens...</div>
+    <div class="tab-pane fade" id="nav-tema" role="tabpanel" aria-labelledby="nav-tema-tab">Postagens por Tema...</div>
+  </div>
 
-    <nav>
-        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-          <a class="nav-link active text-secondary font-weight-bold" id="nav-posts" data-toggle="tab" href="#nav-posts" role="tab" aria-controls="nav-posts" aria-selected="true">Todas as Postagens</a>
-          <a class="nav-link text-secondary font-weight-bold" id="nav-myPost" data-toggle="tab" href="#nav-myPost" role="tab" aria-controls="nav-myPost" aria-selected="false">Minhas Postagens</a>
-          <a class="nav-link text-secondary font-weight-bold" id="nav-tema" data-toggle="tab" href="#nav-tema" role="tab" aria-controls="nav-tema" aria-selected="false">Postagens por Tema</a>
-        </div>
-      </nav>
-      <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-posts" role="tabpanel" aria-labelledby="nav-posts-tab">
-            Todas as postagens...
-        </div>
-        <div class="tab-pane fade" id="nav-myPost" role="tabpanel" aria-labelledby="nav-Mypost-tab">
-            Minhas postagens...
-        </div>
-        <div class="tab-pane fade" id="nav-tema" role="tabpanel" aria-labelledby="nav-tema-tab">
-            Postagens por tema...
-        </div>
-      </div>
-
-</div>
-
-
+  
   <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="novaPostagem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Nova Postagem</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="staticBackdropLabel">Nova postagem</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="form-group">
-              <label for="titulo">Titulo</label>
-              <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
-          </div>
-
-          <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
-         </div>
-
-         <div class="form-group">
-            <label for="tema">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'> cadastre um novo</a>:</label>
+            <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+            </div>
+  
+            <div class="form-group">
+              <label for="texto">Texto</label>
+              <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+           </div>
+  
+           <div class="form-group">
+            <label for="tema">Escolha um tema ou <button type="button" class="btn btn-outline-primary btn-sm" routerLink='/tema' data-bs-dismiss="modal">cadastre um novo</button>:</label>
             <select name="tema" id="tema" class="form-control">
                 <option value="">Temas</option>
             </select>
-        </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-sucess">Publicar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Publicar</button>
         </div>
       </div>
     </div>
