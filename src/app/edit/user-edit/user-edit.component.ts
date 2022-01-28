@@ -44,9 +44,8 @@ export class UserEditComponent implements OnInit {
     if(this.user.senha != this.confirmarSenha) {
       alert('As senhas estão diferentes!')
     } else {
-      this.authService.cadastrar(this.user).subscribe((resp: Usuario) => {
+      this.authService.atualizar(this.user).subscribe((resp: Usuario) => {
         this.user = resp
-        this.router.navigate(['/inicio'])
         alert("Usuário atualizado com sucesso! Faça o login novamente.")
         environment.token =''
         environment.nome = ''
